@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Videos Gallery | De La Fuente</title>
+  <!-- Poppins Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+      padding: 40px 0 60px 0;
+    }
+    .video-card {
+      background: linear-gradient(135deg, #0B0F0C 60%, #25C076 100%);
+      border-radius: 18px;
+      box-shadow: 0 8px 24px 0 rgba(16, 185, 129, 0.15);
+      overflow: hidden;
+      width: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+    }
+    .video-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 12px 32px 0 rgba(16, 185, 129, 0.25);
+    }
+    .video-preview {
+      width: 100%;
+      height: 220px;
+      background: #222;
+      object-fit: cover;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .video-info {
+      padding: 18px 20px 16px 20px;
+      width: 100%;
+      text-align: center;
+    }
+    .video-title {
+      color: var(--color-white, #fff);
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+    .video-desc {
+      color: var(--first-color-hover, #1de9b6);
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+    @media (max-width: 900px) {
+      .gallery-container { gap: 18px; }
+      .video-card { width: 90vw; max-width: 340px; }
+      .video-preview { height: 180px; }
+    }
+    @media (max-width: 600px) {
+      .gallery-container { gap: 10px; }
+      .video-card { width: 98vw; max-width: 98vw; }
+      .video-preview { height: 120px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="viewer-header">
+    <button onclick="window.history.back()">← Back</button>
+    <h2>Videos Gallery</h2>
+  </div>
+
+   <section id="videos">
+    <h1 style="text-align:center; padding:20px 0;">My Video Portfolio</h1>
+    <div class="gallery-container">
+
+      <!-- Bb. Camarines Norte Tourism Video -->
+      <div class="video-card" onclick="window.open('https://drive.google.com/file/d/1vEAjuGyhnkW5RicvgYcYcDrmsyYg7oLl/view?usp=sharing', '_blank')">
+        <img src="assets/thumbs/bb.png" alt="Bb. Camarines Norte Tourism Video" class="video-preview"/>
+        <div class="video-info">
+          <div class="video-title">Bb. Camarines Norte Tourism Video</div>
+          <div class="video-desc">A Tourism Video that showcase the beauty of Talisay, Camarines Norte.</div>
+        </div>
+      </div>
+
+      <!-- 60 Days Countdown Video -->
+      <div class="video-card" onclick="window.open('https://drive.google.com/file/d/1dzyHu5w3KDf7fb_bezXgYP3g8YHf36Gh/view?usp=sharing', '_blank')">
+        <img src="assets/thumbs/60days_thumbs.png" alt="60 Days Countdown Video" class="video-preview"/>
+        <div class="video-info">
+          <div class="video-title">60 Days Countdown Video</div>
+          <div class="video-desc">A short Countdown Video for a Triathlon Event.</div>
+        </div>
+      </div>
+
+      <!-- 50 Days Countdown Video -->
+      <div class="video-card" onclick="window.open('https://drive.google.com/file/d/1j50YCKvQVRrJFU9ol3hxXo-4716ilTif/view?usp=drive_link', '_blank')">
+        <img src="assets/thumbs/50days_thumbs.png" alt="50 Days Countdown Video" class="video-preview"/>
+        <div class="video-info">
+          <div class="video-title">50 Days Countdown Video</div>
+          <div class="video-desc">A short Countdown Video for a Triathlon Event.</div>
+        </div>
+      </div>
+
+      <!-- 40 Days Countdown Video -->
+      <div class="video-card" onclick="window.open('https://drive.google.com/file/d/1E8xud7H-IUM0l1MFai517oW8kZGRDPFS/view?usp=drive_link', '_blank')">
+        <img src="assets/thumbs/40days_thumbs.png" alt="40 Days Countdown Video" class="video-preview"/>
+        <div class="video-info">
+          <div class="video-title">40 Days Countdown Video</div>
+          <div class="video-desc">A short Countdown Video for a Triathlon Event.</div>
+        </div>
+      </div>
+
+      <!-- 30 Days Countdown Video -->
+      <div class="video-card" onclick="window.open('https://drive.google.com/file/d/1ywvayHqqs_OzBG6nwVnsT4ZD_NxzOF5o/view?usp=drive_link', '_blank')">
+        <img src="assets/thumbs/30days_thumbs.png" alt="30 Days Countdown Video" class="video-preview"/>
+        <div class="video-info">
+          <div class="video-title">30 Days Countdown Video</div>
+          <div class="video-desc">A short Countdown Video for a Triathlon Event.</div>
+        </div>
+      </div>
+
+      <!-- 20 Days Countdown Video -->
+      <div class="video-card" onclick="window.open('https://drive.google.com/file/d/1lAXEm44ATmFB0G0OW93OnY6pPo4ljknV/view?usp=drive_link', '_blank')">
+        <img src="assets/thumbs/20days_thumbs.png" alt="20 Days Countdown Video" class="video-preview"/>
+        <div class="video-info">
+          <div class="video-title">20 Days Countdown Video</div>
+          <div class="video-desc">A short Countdown Video for a Triathlon Event.</div>
+        </div>
+      </div>
+
+      <!-- 10 Days Countdown Video -->
+      <div class="video-card" onclick="window.open('https://drive.google.com/file/d/1STnJAnVjVUBoUlDE_7IAo6C9M9VrcCPL/view?usp=drive_link', '_blank')">
+        <img src="assets/thumbs/10days_thumbs.png" alt="10 Days Countdown Video" class="video-preview"/>
+        <div class="video-info">
+          <div class="video-title">10 Days Countdown Video</div>
+          <div class="video-desc">A short Countdown Video for a Triathlon Event.</div>
+        </div>
+      </div>
+
+      <!-- 5 Days Countdown Video -->
+      <div class="video-card" onclick="window.open('https://drive.google.com/file/d/1qArQJbfPh-8TqGatZZfv_kyr_txaPPpy/view?usp=drive_link', '_blank')">
+        <img src="assets/thumbs/5days_thumbs.png" alt="5 Days Countdown Video" class="video-preview"/>
+        <div class="video-info">
+          <div class="video-title">5 Days Countdown Video</div>
+          <div class="video-desc">A short Countdown Video for a Triathlon Event.</div>
+        </div>
+      </div>
+
+       <!-- Royce Group Advertisement -->
+<div class="video-card" onclick="window.open('https://drive.google.com/file/d/15QbUfzH13MjmqgDzFBnV_5txyd0xCDni/view?usp=drive_link, '_blank')">
+  <img src="assets/thumbs/RoyceGroup.png" alt="Royce Group Video Ad" class="video-preview"/>
+  <div class="video-info">
+    <div class="video-title">Royce Group</div>
+    <div class="video-desc">Video Advertisement for Royce Group.</div>
+  </div>
+</div>
+
+<!-- JS Steel Advertisement -->
+<div class="video-card" onclick="window.open('https://drive.google.com/file/d/1_3vfl6IbF_bkRBnlPubPrr7wbh2hGquy/view?usp=sharing', '_blank')">
+  <img src="assets/thumbs/JS.png" alt="JS Steel Video Ad" class="video-preview"/>
+  <div class="video-info">
+    <div class="video-title">JS Steel</div>
+    <div class="video-desc">Video Advertisement for JS Steel.</div>
+  </div>
+</div>
+
+<!-- Ciudad Caliente Advertisement -->
+<div class="video-card" onclick="window.open('https://drive.google.com/file/d/1OtqRYYz4XestutNQhb_SWyEUsB31F-tB/view?usp=drive_link', '_blank')">
+  <img src="assets/thumbs/Cuidad.png" alt="Ciudad Caliente Video Ad" class="video-preview"/>
+  <div class="video-info">
+    <div class="video-title">Ciudad Caliente</div>
+    <div class="video-desc">Video Advertisement for Ciudad Caliente.</div>
+  </div>
+</div>
+
+<!-- Daet Massage & Spa Advertisement -->
+<div class="video-card" onclick="window.open('https://drive.google.com/file/d/1z8lhucSFOz9KaMjshOTY19nVl9tCUObn/view?usp=drive_link', '_blank')">
+  <img src="assets/thumbs/DaetMassage.png" alt="Daet Massage & Spa Video Ad" class="video-preview"/>
+  <div class="video-info">
+    <div class="video-title">Daet Massage & Spa</div>
+    <div class="video-desc">Video Advertisement for Daet Massage & Spa.</div>
+  </div>
+</div>
+
+
+    </div>
+  </section> 
+
+  <footer>
+    <div class="top-footer">
+      <p>Ar-jay</p>
+    </div>
+    <div class="middle-footer">
+      <ul class="footer-menu">
+        <li class="footer_menu_list"><a href="index.html#home">Home</a></li>
+        <li class="footer_menu_list"><a href="index.html#about">About</a></li>
+        <li class="footer_menu_list"><a href="index.html#projects">Projects</a></li>
+        <li class="footer_menu_list"><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-social-icons">
+      <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div class="bottom-footer">
+      <p>&copy; 2025 Ar-jay | All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

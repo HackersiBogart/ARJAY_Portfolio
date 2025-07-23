@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multimedia Showcase | De La Fuente</title>
+  <!-- Poppins Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Extra touch for multimedia cards */
+    .media-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: inherit;
+      background: linear-gradient(135deg, #0B0F0C 60%, #25C076 100%);
+      border-radius: 20px;
+      box-shadow: 1px 8px 20px 2px var(--first-shadow-color, #1de9b6);
+      padding: 40px 20px 30px 20px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      width: 100%;
+      max-width: 340px;
+      min-height: 320px;
+      margin: 0 auto;
+    }
+    .media-link:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 32px 0 rgba(16, 185, 129, 0.25);
+      text-decoration: none;
+    }
+    .media-link i {
+      font-size: 60px;
+      margin-bottom: 25px;
+      color: var(--first-color, #25C076);
+      transition: color 0.3s;
+    }
+    .media-link h3 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: var(--color-white, #fff);
+      font-weight: 600;
+      text-align: center;
+    }
+    .media-link label {
+      font-size: 1rem;
+      color: var(--first-color-hover, #1de9b6);
+      margin-bottom: 18px;
+      text-align: center;
+    }
+    .media-link .preview {
+      margin-top: 18px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .media-link .preview img,
+    .media-link .preview video {
+      border-radius: 8px;
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      background: #222;
+    }
+    .media-link .preview audio {
+      width: 120px;
+    }
+    @media (max-width: 900px) {
+      .media-link { min-height: 260px; }
+    }
+    @media (max-width: 600px) {
+      .media-link { max-width: 100%; min-height: 200px; padding: 30px 10px 20px 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="viewer-header">
+    <button onclick="window.history.back()">← Back</button>
+    <h2>Multimedia Showcase</h2>
+  </div>
+
+  <section class="section" id="multimedia">
+    <div class="top-header">
+      <h1>My Multimedia Works</h1>
+      <span>Explore my creative posters, videos, and audio projects</span>
+    </div>
+    <div class="project-container" style="gap: 40px;">
+      <!-- Posters Card -->
+      <a href="posters.html" class="media-link">
+        <i class="fas fa-image"></i>
+        <h3>Graphics</h3>
+        <label>3d Design, Posters, Canva</label>
+        <span style="margin-top:18px; color:var(--color-white, #fff); font-size:1rem;">View Gallery</span>
+      </a>
+      <!-- Videos Card -->
+      <a href="videos.html" class="media-link">
+        <i class="fas fa-video"></i>
+        <h3>Videos</h3>
+        <label>Editing, Premiere Pro, CapCut</label>
+        <span style="margin-top:18px; color:var(--color-white, #fff); font-size:1rem;">Watch Videos</span>
+      </a>
+      <!-- Audios Card -->
+      <!-- <a href="audios.html" class="media-link">
+        <i class="fas fa-music"></i>
+        <h3>Audios</h3>
+        <label>Composition, Voice, Mixing</label>
+        <span style="margin-top:18px; color:var(--color-white, #fff); font-size:1rem;">Listen Now</span>
+      </a> -->
+    </div>
+  </section>
+
+  <footer>
+    <div class="top-footer">
+      <p>Ar-jay</p>
+    </div>
+    <div class="middle-footer">
+      <ul class="footer-menu">
+        <li class="footer_menu_list"><a href="index.html#home">Home</a></li>
+        <li class="footer_menu_list"><a href="index.html#about">About</a></li>
+        <li class="footer_menu_list"><a href="index.html#projects">Projects</a></li>
+        <li class="footer_menu_list"><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-social-icons">
+      <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div class="bottom-footer">
+      <p>&copy; 2025 Ar-jay | All Rights Reserved</p>
+    </div>
+  </footer>
+</body>
+</html>

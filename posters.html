@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Posters Gallery | De La Fuente</title>
+  <!-- Poppins Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+      padding: 40px 0 60px 0;
+    }
+    .poster-card {
+      background: linear-gradient(135deg, #0B0F0C 60%, #25C076 100%);
+      border-radius: 18px;
+      box-shadow: 0 8px 24px 0 rgba(16, 185, 129, 0.15);
+      overflow: hidden;
+      width: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+    }
+    .poster-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 12px 32px 0 rgba(16, 185, 129, 0.25);
+    }
+    .poster-image {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      background: #222;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .poster-info {
+      padding: 18px 20px 16px 20px;
+      width: 100%;
+      text-align: center;
+    }
+    .poster-title {
+      color: var(--color-white, #fff);
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+    .poster-desc {
+      color: var(--color-white, --color-white);
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+    @media (max-width: 900px) {
+      .gallery-container { gap: 18px; }
+      .poster-card { width: 90vw; max-width: 340px; }
+      .poster-image { height: 300px; }
+    }
+    @media (max-width: 600px) {
+      .gallery-container { gap: 10px; }
+      .poster-card { width: 98vw; max-width: 98vw; }
+      .poster-image { height: 200px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="viewer-header">
+    <button onclick="window.history.back()">← Back</button>
+    <h2>Posters Gallery</h2>
+  </div>
+
+  <section class="section" id="posters">
+    <div class="top-header">
+      <h1>My Poster Designs</h1>
+      <span>Creative posters made with Photoshop, Canva, and more</span>
+    </div>
+    <div class="gallery-container">
+      <!-- Poster Card Example -->
+       
+      <div class="poster-card">
+        <img src="assets/3ds/Carrot.png" alt="Poster 1" class="poster-image">
+        <div class="poster-info">
+          <div class="poster-title">3D Design</div>
+          <div class="poster-desc">3D Design for Carrot Business.</div>
+        </div>
+      </div>
+      <div class="poster-card">
+        <img src="assets/3ds/Fries.png" alt="Poster 2" class="poster-image">
+        <div class="poster-info">
+          <div class="poster-title">3D Designe</div>
+          <div class="poster-desc">3D Design for Fries Business.</div>
+        </div>
+      </div>
+      <div class="poster-card">
+        <img src="assets/3ds/Haricot.png" alt="Poster 3" class="poster-image">
+        <div class="poster-info">
+          <div class="poster-title">3D Design</div>
+          <div class="poster-desc">3D Design for String Haricot Business</div>
+        </div>
+      </div>
+      <div class="poster-card">
+        <img src="assets/3ds/Hotdog.png" alt="Poster 3" class="poster-image">
+        <div class="poster-info">
+          <div class="poster-title">3D Design</div>
+          <div class="poster-desc">3D Design for Hotdog Business</div>
+        </div>
+      </div>
+      <div class="poster-card">
+        <img src="assets/posters/Everything's Fair.png" alt="Poster 1" class="poster-image">
+        <div class="poster-info">
+          <div class="poster-title">Everything's Fair</div>
+          <div class="poster-desc">Everything's Fair Event Poster</div>
+        </div>
+      </div>
+      <div class="poster-card">
+        <img src="assets/posters/Leadership Seminar.png" alt="Poster 1" class="poster-image">
+        <div class="poster-info">
+          <div class="poster-title">Leadership Seminar</div>
+          <div class="poster-desc">A Leadership Seminar Poster</div>
+        </div>
+      </div>
+      <div class="poster-card">
+        <img src="assets/posters/CNSC App Logo.png" alt="Poster 1" class="poster-image">
+        <div class="poster-info">
+          <div class="poster-title">CNSC News & Update logo</div>
+          <div class="poster-desc">A logo designed for an app in Camarines Norte State College</div>
+        </div>
+      </div>
+      <!-- Add more poster-card blocks as needed -->
+    </div>
+  </section>
+
+  <footer>
+    <div class="top-footer">
+      <p>Ar-jay</p>
+    </div>
+    <div class="middle-footer">
+      <ul class="footer-menu">
+        <li class="footer_menu_list"><a href="index.html#home">Home</a></li>
+        <li class="footer_menu_list"><a href="index.html#about">About</a></li>
+        <li class="footer_menu_list"><a href="index.html#projects">Projects</a></li>
+        <li class="footer_menu_list"><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-social-icons">
+      <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div class="bottom-footer">
+      <p>&copy; 2025 Ar-jay | All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
